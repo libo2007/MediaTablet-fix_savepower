@@ -102,10 +102,9 @@ public class BrightnessTools {
                 Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
         int brightNess = getScreenBrightness(context);
         if(brightNess >=200){
-            brightNess =100;
+            brightNess =80;
         }
         setBrightness(context,brightNess);
-
     }
 
     /**
