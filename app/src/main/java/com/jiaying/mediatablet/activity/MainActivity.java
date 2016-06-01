@@ -1434,6 +1434,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 tabletStateContext.handleMessge(recordState, observableZXDCSignalListenerThread, null, null, RecSignal.COMPRESSINON);
+                MyLog.e("SCR","screen:" + BrightnessTools.getScreenBrightness(MainActivity.this));
             }
         });
 
@@ -1520,7 +1521,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     //调正常屏幕亮度
     private void setBrightnessNormal() {
         BrightnessTools.startAutoBrightness(this);
-        BrightnessTools.setBrightness(this, 80);
+//        BrightnessTools.setBrightness(this, 80);
     }
 }
 
