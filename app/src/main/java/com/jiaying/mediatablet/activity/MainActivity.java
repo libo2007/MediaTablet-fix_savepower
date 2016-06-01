@@ -1520,7 +1520,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     //调正常屏幕亮度
     private void setBrightnessNormal() {
         BrightnessTools.startAutoBrightness(this);
-        BrightnessTools.setBrightness(this, 100);
+        BrightnessTools.setBrightness(this, 80);
     }
 }
 
