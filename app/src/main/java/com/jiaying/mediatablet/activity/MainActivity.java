@@ -514,7 +514,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public synchronized void dealConfirm() {
         Log.e("ERROR", "开始--处理确认信号" + fragmentManager.toString());
 
-
+        setBrightnessNormal();
         //设置显示状态
         showUiComponent(false, true, false, false);
 
@@ -1114,6 +1114,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void dealCheckOver() {
         Log.e("ERROR", "开始--处理检查通过信号" + recordState.getState().toString() + " " + fragmentManager.toString());
 
+        setBrightnessLow();
         //设置显示状态
         showUiComponent(false, true, false, false);
 

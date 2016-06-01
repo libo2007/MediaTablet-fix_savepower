@@ -15,7 +15,7 @@ import android.util.Log;
 import android.view.WindowManager;
 
 public class BrightnessTools {
-
+    private static final String TAG ="BrightnessTools";
     /**
      * 判断是否开启了自动亮度调节
      */
@@ -60,6 +60,7 @@ public class BrightnessTools {
 
         }
 
+        MyLog.e(TAG,"nowBrightnessValue:" + nowBrightnessValue);
         return nowBrightnessValue;
     }
 
@@ -92,7 +93,7 @@ public class BrightnessTools {
      * @param context
      */
 
-    public static void startAutoBrightness(Context context) {
+    public static void startAutoBrightness(Activity context) {
 
         Settings.System.putInt(context.getContentResolver(),
 
