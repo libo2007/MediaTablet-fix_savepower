@@ -91,7 +91,7 @@ public class SelfFile {
         }
     }
 
-    private static String fileEx = ".mp4";
+    public static String fileEx = ".mp4";
 
     public static String generateRemoteVideoName() {
 

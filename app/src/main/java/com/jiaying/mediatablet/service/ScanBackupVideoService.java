@@ -110,9 +110,10 @@ public class ScanBackupVideoService extends Service {
                 mHandler.sendEmptyMessage(MSG_SCAN_DELAY);
             } else {
                 //向服务器传送文件
-                MyLog.e(TAG, "backup目录下存在视频文件：" + backupFileList.get(0).getPlay_url());
-                String backFilePath = backupFileList.get(0).getPlay_url();
-                upLoadVideo(backFilePath, SelfFile.getRemoteVideoNamePrefix() + backFilePath);
+                String localFilePath = backupFileList.get(0).getPlay_url();
+                String remoteFilePath = SelfFile.getRemoteVideoNamePrefix() + backupFileList.get(0).getName() +SelfFile.fileEx;
+                MyLog.e(TAG, "backup目录下存在视频文件, 本地路径：" + localFilePath + "\n远程文件名：" + remoteFilePath);
+                upLoadVideo(localFilePath, remoteFilePath);
             }
         }
     }
